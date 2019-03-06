@@ -1,0 +1,48 @@
+
+<div>
+  <img width="500" src="assets/mariothinking.png" alt="mariothinking" />
+</div>
+
+  <div *ngIf="editableGame">
+    <h1>Edit Game</h1>
+    <form (submit)="updateGame()">
+      
+      <div class="form-group">
+        {{ nameError }} Name:
+        <input type="text" class="form-control" name="name" [(ngModel)]="editableGame.name" />
+      </div>
+      
+      <div class="form-group">
+        {{ esrbError }} Esrb:
+        <input type="text" class="form-control" name="esrb" [(ngModel)]="editableGame.esrb" />
+      </div>
+      
+      <div class="form-group">
+        {{ genre1Error }} Genre 1:
+        <input type="text" class="form-control" name="genre1" [(ngModel)]="editableGame.genre1" />
+      </div>
+      
+      <div class="form-group">
+        {{ genre2Error }} Genre 2:
+        <input type="text" class="form-control" name="genre2" [(ngModel)]="editableGame.genre2" />
+      </div>
+      
+      <div class="form-group">
+        {{ scoreError }} Score:
+        <input type="text" class="form-control" name="score" [(ngModel)]="editableGame.score" />
+      </div>
+      
+      <div class="form-group">
+        {{ descriptionError }} Description:
+        <input type="text" class="form-control" name="description"[(ngModel)]="editableGame.description"/>
+        </div>
+      
+        <div class="form group">
+        <input type="submit" class="btn btn-primary mb-2" value="Update" />
+      </div>
+      <button [routerLink]="['/games']" class="btn btn-secondary mb-2">
+        Cancel
+      </button>
+    </form>
+  </div>
+

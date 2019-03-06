@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Game List</h1>
+  <div>
+    <img width="800" src="assets/pacman.jpg" alt="pacman">
+  </div>
+  <p *ngFor="let game of games">
+    Name : {{ game.name }} Description: {{ game.description }} Esrb: {{ game.esrb }} Score: {{ game.genre1 }} Score: {{ game.genre2
+    }} Score: {{ game.score }}
+    <button [routerLink]="['/games', game._id ]">Details</button>
+    <button [routerLink]="['/games', game._id, 'edit']">Edit</button>
+    <button (click)="deleteGames(game._id)">Delete</button>
+  </p>
+
+  <a [routerLink]="['/games', 'new']">New Game</a>
+</div>

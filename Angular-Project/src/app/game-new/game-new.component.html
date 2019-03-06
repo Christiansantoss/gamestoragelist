@@ -1,0 +1,19 @@
+<h1>New Game</h1>
+<form (submit)="createGame()">
+  Name: <input type="text" name="name" [(ngModel)]="newGame.name" id="">
+  {{nameError}}
+ Esrb: <input type="text" name="type" [(ngModel)]="newGame.esrb" id="">
+  {{esrbError}}
+ Description: <input type="text" name="description" [(ngModel)]="newGame.description" id="">
+ {{descriptionError}}
+
+ Genre 1: <input type="text" name="genre1" [(ngModel)]="newGame.genre1" id="">
+ {{genre1Error}}
+  Genre 2:<input type="text" name="genre2" [(ngModel)]="newGame.genre2" id="">
+  {{genre2Error}}
+ Score : <input type="text" name="score" [(ngModel)]="newGame.score" id="">
+ {{scoreError}}
+  <input type="submit" value="Create">
+  <button [routerLink]="['/games']" >Cancel</button>
+
+</form>
